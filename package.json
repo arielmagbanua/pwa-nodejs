@@ -1,0 +1,32 @@
+{
+  "name": "pwa-nodejs",
+  "version": "1.0.0",
+  "description": "pwa node js demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arielmagbanua/pwa-nodejs.git"
+  },
+  "keywords": [
+    "pwa",
+    "service",
+    "worker",
+    "nodejs"
+  ],
+  "author": "ariel magbanua",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/arielmagbanua/pwa-nodejs/issues"
+  },
+  "homepage": "https://github.com/arielmagbanua/pwa-nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "body-parser": "^1.18.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
+}
