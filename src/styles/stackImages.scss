@@ -1,0 +1,11 @@
+@import "@material/button/mdc-button";
+@import "@material/image-list/mdc-image-list";
+
+.foo-button {
+	@include mdc-button-ink-color(teal);
+	@include mdc-states(teal);
+}
+
+.my-image-list {
+	@include mdc-image-list-standard-columns(5);
+  }

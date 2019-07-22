@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
-    "start-server": "node app.js"
+    "start-server": "node app.js",
+    "webpack-dev": "webpack -d",
+    "webpack-server": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -25,10 +27,24 @@
   },
   "homepage": "https://github.com/arielmagbanua/pwa-nodejs#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "body-parser": "^1.18.3"
+    "@material/image-list": "^3.0.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.17.1"
   },
   "devDependencies": {
-    "nodemon": "^1.18.11"
+    "@material/button": "^3.0.0",
+    "autoprefixer": "^9.6.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^3.1.0",
+    "extract-loader": "^3.1.0",
+    "file-loader": "^4.1.0",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.18.11",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "webpack": "^3.12.0",
+    "webpack-dev-server": "^2.11.5"
   }
 }

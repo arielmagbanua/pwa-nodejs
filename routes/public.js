@@ -10,7 +10,7 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/static-images', (req, res, next) => {
-    // res.sendFile(path.join(rootDir, 'views', 'index.html'));
+    res.sendFile(path.join(rootDir, 'public', 'views', 'static-images.html'));
 });
 
 
