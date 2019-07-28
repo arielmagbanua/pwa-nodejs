@@ -6,6 +6,15 @@
 	@include mdc-states(teal);
 }
 
-.my-image-list {
-	@include mdc-image-list-standard-columns(5);
-  }
+.my-masonry-image-list {
+	@include mdc-image-list-masonry-columns(5);
+}
+
+section#photo-grid {
+	padding-right: 180px;
+	padding-left: 180px;
+}
+
+li.photo-container {
+	border-radius: 25px;
+}

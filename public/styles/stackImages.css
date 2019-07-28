@@ -420,3 +420,10 @@ svg.mdc-button__icon {
        column-gap: 16px; }
   .my-masonry-image-list .mdc-image-list__item {
     margin-bottom: 16px; }
+
+section#photo-grid {
+  padding-right: 180px;
+  padding-left: 180px; }
+
+li.photo-container {
+  border-radius: 25px; }
