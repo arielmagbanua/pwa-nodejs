@@ -11,7 +11,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 const publicRoutes = require('./routes/public');
+const apiRoutes = require('./routes/api');
 
 app.use(publicRoutes);
+app.use('/api', apiRoutes);
 
 app.listen(9000);
