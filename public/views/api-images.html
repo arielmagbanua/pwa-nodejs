@@ -113,44 +113,7 @@
 		</ul>
 	</section>
 
-    <script>
-        let photoListSection = document.querySelector('#photo-grid > ul.my-masonry-image-list');
-
-        (() => {
-            fetch('/api/images').then((response) => response.json())
-                .then((data) => {
-                    const images = data.images;
-                    images.forEach((item) => {
-                        let grid = document.createElement('li');
-                        grid.classList.add('mdc-image-list__item');
-                        grid.classList.add('photo-container');
-                        
-                        let image = document.createElement('img');
-                        image.src = '/'+item.path;
-                        image.classList.add('mdc-image-list__image');
-                        
-                        let labelContainer = document.createElement('div');
-                        labelContainer.classList.add('mdc-image-list__supporting');
-                        let label = document.createElement('span');
-                        label.classList.add('mdc-image-list__label');
-                        labelContainer.appendChild(label);
-
-                        grid.appendChild(image);
-                        grid.appendChild(labelContainer);
-                        
-                        // let gridContent = `
-				        //     <img class="mdc-image-list__image" src="/${item.path}">
-				        //     <div class="mdc-image-list__supporting">
-					    //         <span class="mdc-image-list__label"></span>
-				        //     </div>
-                        // `;
-
-                        // grid.innerHTML = gridContent.trim();
-                        photoListSection.appendChild(grid);
-                    });
-                });
-        })();
-    </script>
+    <script></script>
 </body>
 
 </html>
