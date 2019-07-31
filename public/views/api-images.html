@@ -127,9 +127,17 @@
                         
                         let image = document.createElement('img');
                         image.src = '/'+item.path;
+                        image.classList.add('mdc-image-list__image');
                         
-                        grid.appendChild(image);
+                        let labelContainer = document.createElement('div');
+                        labelContainer.classList.add('mdc-image-list__supporting');
+                        let label = document.createElement('span');
+                        label.classList.add('mdc-image-list__label');
+                        labelContainer.appendChild(label);
 
+                        grid.appendChild(image);
+                        grid.appendChild(labelContainer);
+                        
                         // let gridContent = `
 				        //     <img class="mdc-image-list__image" src="/${item.path}">
 				        //     <div class="mdc-image-list__supporting">
@@ -138,7 +146,6 @@
                         // `;
 
                         // grid.innerHTML = gridContent.trim();
-                        console.log(grid);
                         photoListSection.appendChild(grid);
                     });
                 });
