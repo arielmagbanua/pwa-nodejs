@@ -1,12 +1,12 @@
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
-    entry: [
-        './src/styles/stackImages.scss',
-        './src/js/api-images.js'
-    ],
+    entry: {
+        stackImages: './src/styles/stackImages.scss',
+        apiImages: './src/js/apiImages.js'
+    },
     output: {
-        filename: 'public/js/bundle.js',
+        filename: './public/js/[name].js',
     },
     module: {
         rules: [
@@ -37,20 +37,9 @@ module.exports = {
             },
             {
                 test: /\.js$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: './public/js/[name].js',
-                        },
-                    },
-                    {
-                        loader: 'babel-loader'
-                    }   
-                ],
-                
+                loader: 'babel-loader',
                 query: {
-                    presets: ['es2015'],
+                    presets: ['@babel/preset-env'],
                 },
             }
         ],

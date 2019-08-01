@@ -65,18 +65,6 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/*!*******************************************!*\
-  !*** multi ./src/styles/stackImages.scss ***!
-  \*******************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! ./src/styles/stackImages.scss */1);
-
-
-/***/ }),
-/* 1 */
 /*!*************************************!*\
   !*** ./src/styles/stackImages.scss ***!
   \*************************************/
@@ -84,7 +72,7 @@ module.exports = __webpack_require__(/*! ./src/styles/stackImages.scss */1);
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"./public/styles/stackImages.css\";//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMS5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3NyYy9zdHlsZXMvc3RhY2tJbWFnZXMuc2Nzcz9kNmQzIl0sInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gX193ZWJwYWNrX3B1YmxpY19wYXRoX18gKyBcIi4vcHVibGljL3N0eWxlcy9zdGFja0ltYWdlcy5jc3NcIjtcblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyAuL3NyYy9zdHlsZXMvc3RhY2tJbWFnZXMuc2Nzc1xuLy8gbW9kdWxlIGlkID0gMVxuLy8gbW9kdWxlIGNodW5rcyA9IDAiXSwibWFwcGluZ3MiOiJBQUFBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///1\n");
+eval("module.exports = __webpack_require__.p + \"./public/styles/stackImages.css\";//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMC5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3NyYy9zdHlsZXMvc3RhY2tJbWFnZXMuc2Nzcz9kNmQzIl0sInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gX193ZWJwYWNrX3B1YmxpY19wYXRoX18gKyBcIi4vcHVibGljL3N0eWxlcy9zdGFja0ltYWdlcy5jc3NcIjtcblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyAuL3NyYy9zdHlsZXMvc3RhY2tJbWFnZXMuc2Nzc1xuLy8gbW9kdWxlIGlkID0gMFxuLy8gbW9kdWxlIGNodW5rcyA9IDAiXSwibWFwcGluZ3MiOiJBQUFBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///0\n");
 
 /***/ })
 /******/ ]);
