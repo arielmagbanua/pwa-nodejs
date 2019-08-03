@@ -81,6 +81,11 @@ workbox.routing.registerRoute(
 );
 
 workbox.routing.registerRoute(
+    new RegExp('\/$'),
+    new workbox.strategies.NetworkFirst()
+);
+
+workbox.routing.registerRoute(
     new RegExp('\/images\/large\/(.+)\.(jpg|jpeg|png|gif)$'),
     new workbox.strategies.StaleWhileRevalidate()
 );
