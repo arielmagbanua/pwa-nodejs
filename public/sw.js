@@ -8,7 +8,7 @@ workbox.core.clientsClaim();
 workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "947d5d0abf6d0bc5e5790426aa047eb8"
+    "revision": "8efd23fd08a2eea4182933a7be7303fc"
   },
   {
     "url": "js/apiImages.js",
@@ -21,6 +21,10 @@ workbox.precaching.precacheAndRoute([
   {
     "url": "styles/stackImages.css",
     "revision": "8ffd702d617fc9ff80b8e4928972a5fd"
+  },
+  {
+    "url": "images/thumbnails/20180316-rust-1.jpg",
+    "revision": "28b41bb7f1c6d57a8a32b389e777dbff"
   },
   {
     "url": "images/thumbnails/20180317-flower-1.jpg",
@@ -51,6 +55,10 @@ workbox.precaching.precacheAndRoute([
     "revision": "5cf3c9f3babb98d588961a2f48846b7b"
   },
   {
+    "url": "images/thumbnails/20180401-golden-1.jpg",
+    "revision": "5e83bb5ea00bc86533cedf7766376d36"
+  },
+  {
     "url": "images/thumbnails/20180401-heart-1.jpg",
     "revision": "8fd801f1a21e5308380e21adea31305e"
   },
@@ -70,5 +78,10 @@ workbox.precaching.precacheAndRoute([
 
 workbox.routing.registerRoute(
     'http://localhost:9000/api/my-data',
+    workbox.strategies.networkFirst()
+);
+
+workbox.routing.registerRoute(
+    'http://localhost:9000/best-images',
     workbox.strategies.networkFirst()
 );

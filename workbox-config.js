@@ -6,5 +6,5 @@ module.exports = {
     "images/thumbnails/*.jpg"
   ],
   swDest: "public/sw.js",
-  swSrc: "./src/js/service-worker.js"
+  swSrc: "./src/service-worker.js"
 };

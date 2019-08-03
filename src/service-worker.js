@@ -11,3 +11,8 @@ workbox.routing.registerRoute(
     'http://localhost:9000/api/my-data',
     workbox.strategies.networkFirst()
 );
+
+workbox.routing.registerRoute(
+    'http://localhost:9000/best-images',
+    workbox.strategies.networkFirst()
+);
