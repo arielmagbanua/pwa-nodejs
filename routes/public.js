@@ -5,7 +5,7 @@ const rootDir = require('../utils/path');
 const router = express.Router();
 
 router.get('/best-images', (req, res, next) => {
-    res.sendFile(path.join(rootDir, 'public', 'index.html'));
+    res.sendFile(path.join(rootDir, 'views', 'best-images.html'));
 });
 
 module.exports = router;

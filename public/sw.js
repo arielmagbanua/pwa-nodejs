@@ -7,10 +7,6 @@ workbox.core.clientsClaim();
 
 workbox.precaching.precacheAndRoute([
   {
-    "url": "index.html",
-    "revision": "8efd23fd08a2eea4182933a7be7303fc"
-  },
-  {
     "url": "js/apiImages.js",
     "revision": "0096b0ee0635c4877d408ac6e0ab4e15"
   },
