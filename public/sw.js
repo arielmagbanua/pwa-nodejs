@@ -8,11 +8,11 @@ workbox.core.clientsClaim();
 workbox.precaching.precacheAndRoute([
   {
     "url": "js/bundle.js",
-    "revision": "144f4259bc881518c92b17f2114995c7"
+    "revision": "7724705bf0ba16c6753b980480a0bfce"
   },
   {
     "url": "styles/best-images.css",
-    "revision": "cf8cfd97e6d1ae89deee9fb35becbab4"
+    "revision": "902a9857ee1b58a3cba96edb50e1b821"
   },
   {
     "url": "images/thumbnails/20180316-rust-1.jpg",

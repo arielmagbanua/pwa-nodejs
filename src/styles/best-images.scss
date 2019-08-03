@@ -2,11 +2,6 @@
 @import "@material/image-list/mdc-image-list";
 @import "@material/dialog/mdc-dialog";
 
-.foo-button {
-	@include mdc-button-ink-color(teal);
-	@include mdc-states(teal);
-}
-
 .my-masonry-image-list {
 	@include mdc-image-list-masonry-columns(5);
 }
@@ -18,4 +13,12 @@ section#photo-grid {
 
 li.photo-container {
 	border-radius: 25px;
+}
+
+// @include mdc-dialog-min-width(800px);
+// @include mdc-dialog-max-width(900px, 8px);
+
+.mdc-dialog .mdc-dialog__surface {
+	min-width: 500px;
+	max-width: 600px;
 }

@@ -608,29 +608,6 @@ svg.mdc-button__icon {
 .mdc-dialog-scroll-lock {
   overflow: hidden; }
 
-.foo-button:not(:disabled) {
-  color: teal; }
-
-.foo-button::before, .foo-button::after {
-  background-color: teal; }
-
-.foo-button:hover::before {
-  opacity: 0.04; }
-
-.foo-button:not(.mdc-ripple-upgraded):focus::before, .foo-button.mdc-ripple-upgraded--background-focused::before {
-  transition-duration: 75ms;
-  opacity: 0.12; }
-
-.foo-button:not(.mdc-ripple-upgraded)::after {
-  transition: opacity 150ms linear; }
-
-.foo-button:not(.mdc-ripple-upgraded):active::after {
-  transition-duration: 75ms;
-  opacity: 0.12; }
-
-.foo-button.mdc-ripple-upgraded {
-  --mdc-ripple-fg-opacity: 0.12; }
-
 .my-masonry-image-list {
   -moz-column-count: 5;
        column-count: 5;
@@ -645,3 +622,7 @@ section#photo-grid {
 
 li.photo-container {
   border-radius: 25px; }
+
+.mdc-dialog .mdc-dialog__surface {
+  min-width: 500px;
+  max-width: 600px; }
