@@ -8,7 +8,7 @@ workbox.core.clientsClaim();
 workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "551256d19774b5291d0a2f24d1513d1d"
+    "revision": "947d5d0abf6d0bc5e5790426aa047eb8"
   },
   {
     "url": "js/apiImages.js",
@@ -45,6 +45,14 @@ workbox.precaching.precacheAndRoute([
   {
     "url": "images/thumbnails/20180331-food-2.jpg",
     "revision": "a42e0f3b591444cadbd03ddfc4bc969f"
+  },
+  {
+    "url": "images/thumbnails/20180331-light-1.jpg",
+    "revision": "5cf3c9f3babb98d588961a2f48846b7b"
+  },
+  {
+    "url": "images/thumbnails/20180401-heart-1.jpg",
+    "revision": "8fd801f1a21e5308380e21adea31305e"
   },
   {
     "url": "images/thumbnails/20180402-flower-5.jpg",

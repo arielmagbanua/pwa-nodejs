@@ -14,9 +14,87 @@
 </head>
 
 <body>
-	<div id="content">
+	<section id="photo-grid">
+		<ul class="mdc-image-list mdc-image-list--masonry my-masonry-image-list">
+			<li class="mdc-image-list__item photo-container">
+				<img class="mdc-image-list__image" src="images/thumbnails/20180317-flower-1.jpg">
+				<div class="mdc-image-list__supporting">
+				</div>
+			</li>
 
-    </div>
+			<li class="mdc-image-list__item photo-container">
+				<img class="mdc-image-list__image" src="images/thumbnails/20180331-light-1.jpg">
+				<div class="mdc-image-list__supporting">
+				</div>
+			</li>
+
+			<li class="mdc-image-list__item photo-container">
+				<img class="mdc-image-list__image" src="images/thumbnails/20180317-flower-3.jpg">
+				<div class="mdc-image-list__supporting">
+				</div>
+			</li>
+
+			<li class="mdc-image-list__item photo-container">
+				<img class="mdc-image-list__image" src="images/thumbnails/20180331-flower-4.jpg">
+				<div class="mdc-image-list__supporting">
+				</div>
+			</li>
+
+			<li class="mdc-image-list__item photo-container">
+				<img class="mdc-image-list__image" src="images/thumbnails/20180402-flower-5.jpg">
+				<div class="mdc-image-list__supporting">
+				</div>
+			</li>
+
+			<li class="mdc-image-list__item photo-container">
+				<img class="mdc-image-list__image" src="images/thumbnails/20180317-flower-2.jpg">
+				<div class="mdc-image-list__supporting">
+				</div>
+			</li>
+
+			<li class="mdc-image-list__item photo-container">
+				<img class="mdc-image-list__image" src="images/thumbnails/20180401-heart-1.jpg">
+				<div class="mdc-image-list__supporting">
+				</div>
+			</li>
+
+			<li class="mdc-image-list__item photo-container">
+				<img class="mdc-image-list__image" src="images/thumbnails/20180402-flower-6.jpg">
+				<div class="mdc-image-list__supporting">
+				</div>
+			</li>
+
+			<li class="mdc-image-list__item photo-container">
+				<img class="mdc-image-list__image" src="images/thumbnails/20180331-food-1.jpg">
+				<div class="mdc-image-list__supporting">
+				</div>
+			</li>
+
+			<li class="mdc-image-list__item photo-container">
+				<img class="mdc-image-list__image" src="images/thumbnails/20180331-food-2.jpg">
+				<div class="mdc-image-list__supporting">
+				</div>
+			</li>
+
+			<li class="mdc-image-list__item photo-container">
+				<img class="mdc-image-list__image" src="images/thumbnails/20180407-cake-1.jpg">
+				<div class="mdc-image-list__supporting">
+				</div>
+			</li>
+
+			<li class="mdc-image-list__item photo-container">
+				<img class="mdc-image-list__image" src="images/thumbnails/20180401-golden-1.jpg">
+				<div class="mdc-image-list__supporting">
+				</div>
+			</li>
+
+			<li class="mdc-image-list__item photo-container">
+				<img class="mdc-image-list__image" src="images/thumbnails/20180316-rust-1.jpg">
+				<div class="mdc-image-list__supporting">
+				</div>
+			</li>
+		</ul>
+	</section>
 
 	<script>
 		(() => {
@@ -32,15 +110,15 @@
 						});
 				}
 
-				fetch('http://localhost:9000/api/my-data')
-					.then((response) => response.json())
-					.then((data) => {
-                        console.log(data);
-                        const personData = `<pre>${JSON.stringify(data)}</pre>`;
-                        document.getElementById('content').innerHTML = personData;
-					}).catch((error) => {
-						console.log(error);
-					});
+				// fetch('http://localhost:9000/api/my-data')
+				// 	.then((response) => response.json())
+				// 	.then((data) => {
+                //         console.log(data);
+                //         const personData = `<pre>${JSON.stringify(data)}</pre>`;
+                //         document.getElementById('content').innerHTML = personData;
+				// 	}).catch((error) => {
+				// 		console.log(error);
+				// 	});
 			});
 
 		})();
