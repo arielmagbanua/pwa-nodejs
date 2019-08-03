@@ -12,7 +12,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "styles/best-images.css",
-    "revision": "902a9857ee1b58a3cba96edb50e1b821"
+    "revision": "0c2216d66a778ba7a7f55ac10c451817"
   },
   {
     "url": "images/thumbnails/20180316-rust-1.jpg",
@@ -69,11 +69,11 @@ workbox.precaching.precacheAndRoute([
 ]);
 
 workbox.routing.registerRoute(
-    'http://localhost:9000/api/my-data',
-    workbox.strategies.networkFirst()
+    new RegExp('\/api\/my-data$'),
+    new workbox.strategies.NetworkFirst()
 );
 
 workbox.routing.registerRoute(
-    'http://localhost:9000/best-images',
-    workbox.strategies.networkFirst()
+    new RegExp('\/best-images$'),
+    new workbox.strategies.NetworkFirst()
 );

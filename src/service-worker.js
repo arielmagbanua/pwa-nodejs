@@ -8,11 +8,11 @@ workbox.core.clientsClaim();
 workbox.precaching.precacheAndRoute([]);
 
 workbox.routing.registerRoute(
-    'http://localhost:9000/api/my-data',
-    workbox.strategies.networkFirst()
+    new RegExp('\/api\/my-data$'),
+    new workbox.strategies.NetworkFirst()
 );
 
 workbox.routing.registerRoute(
-    'http://localhost:9000/best-images',
-    workbox.strategies.networkFirst()
+    new RegExp('\/best-images$'),
+    new workbox.strategies.NetworkFirst()
 );
