@@ -14,5 +14,7 @@ workbox.routing.registerRoute(
 
 workbox.routing.registerRoute(
     new RegExp('\/best-images$'),
-    new workbox.strategies.NetworkFirst()
+    new workbox.strategies.NetworkFirst({
+        cacheName: 'route@best-images'
+    })
 );
