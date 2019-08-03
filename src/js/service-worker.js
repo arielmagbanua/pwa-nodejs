@@ -3,5 +3,5 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox
 if (workbox) {
     workbox.precaching.precacheAndRoute([]);
 } else {
-    console.log(`Boo! Workbox didn't load!`);
+    console.log(`Workbox didn't load!`);
 }
