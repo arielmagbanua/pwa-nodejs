@@ -8,7 +8,7 @@ workbox.core.clientsClaim();
 workbox.precaching.precacheAndRoute([
   {
     "url": "js/bundle.js",
-    "revision": "fa19e487139dc9bafe3a08a047ac8781"
+    "revision": "144f4259bc881518c92b17f2114995c7"
   },
   {
     "url": "styles/best-images.css",
