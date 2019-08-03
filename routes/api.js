@@ -57,4 +57,22 @@ router.get('/images', (req, res, next) => {
     });
 });
 
+router.get('/my-data', (req, res, next) => {
+    // enable cors
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
+    res.send({
+        "name": "Ariel Magbanua",
+        "position": "Software Engineer",
+        "company": "Zeald",
+        "projects": [
+            "Zest",
+            "Zeald Flow",
+            "LifeCare",
+            "Selenium"
+        ]
+    })
+});
+
 module.exports = router;

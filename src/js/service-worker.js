@@ -1,7 +1,13 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
 
-if (workbox) {
-    workbox.precaching.precacheAndRoute([]);
-} else {
-    console.log(`Workbox didn't load!`);
-}
+workbox.precaching.cleanupOutdatedCaches();
+
+workbox.core.skipWaiting();
+workbox.core.clientsClaim();
+
+workbox.precaching.precacheAndRoute([]);
+
+workbox.routing.registerRoute(
+    'http://localhost:9000/api/my-data',
+    workbox.strategies.networkFirst()
+);

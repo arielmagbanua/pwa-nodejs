@@ -1,4 +1,5 @@
 const autoprefixer = require('autoprefixer');
+const workboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -43,5 +44,5 @@ module.exports = {
                 },
             }
         ],
-    },
+    }
 };
