@@ -18,3 +18,8 @@ workbox.routing.registerRoute(
         cacheName: 'route@best-images'
     })
 );
+
+workbox.routing.registerRoute(
+    new RegExp('\/images\/large\/(.+)\.(jpg|jpeg|png|gif)$'),
+    new workbox.strategies.StaleWhileRevalidate()
+);
