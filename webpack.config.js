@@ -1,12 +1,12 @@
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
-    entry: {
-        stackImages: './src/styles/stackImages.scss',
-        apiImages: './src/js/apiImages.js'
-    },
+    entry: [
+        './src/styles/best-images.scss',
+        './src/js/best-images.js'
+    ],
     output: {
-        filename: './public/js/[name].js',
+        filename: './public/js/bundle.js',
     },
     module: {
         rules: [

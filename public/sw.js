@@ -7,16 +7,12 @@ workbox.core.clientsClaim();
 
 workbox.precaching.precacheAndRoute([
   {
-    "url": "js/apiImages.js",
-    "revision": "0096b0ee0635c4877d408ac6e0ab4e15"
+    "url": "js/bundle.js",
+    "revision": "fa19e487139dc9bafe3a08a047ac8781"
   },
   {
-    "url": "js/stackImages.js",
-    "revision": "360d659c29fac9a142387864b02c99a4"
-  },
-  {
-    "url": "styles/stackImages.css",
-    "revision": "8ffd702d617fc9ff80b8e4928972a5fd"
+    "url": "styles/best-images.css",
+    "revision": "cf8cfd97e6d1ae89deee9fb35becbab4"
   },
   {
     "url": "images/thumbnails/20180316-rust-1.jpg",
