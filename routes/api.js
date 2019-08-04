@@ -1,61 +1,19 @@
 const path = require('path');
 const express = require('express');
-const rootDir = require('../utils/path');
+const dotenv = require('dotenv');
+dotenv.config();
+// const rootDir = require('../utils/path');
+
+var Twitter = require('twitter');
+ 
+var client = new Twitter({ 
+    consumer_key: process.env.TWITTER_CONSUMER_KEY,
+    consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+    access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+    access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
+});
 
 const router = express.Router();
-
-router.get('/images', (req, res, next) => {
-    res.send({
-        "albumTitle": "Zeald Family Day",
-        "images": [
-            {
-                "path": "images/20190713-zeald-fam-5.jpg"
-            },
-            {
-                "path": "images/20190713-zeald-fam-23.jpg"
-            },
-            {
-                "path": "images/20190713-zeald-fam-26.jpg"
-            },
-            {
-                "path": "images/20190713-zeald-fam-28.jpg"
-            },
-            {
-                "path": "images/20190713-zeald-fam-57.jpg"
-            },
-            {
-                "path": "images/20190713-zeald-fam-100.jpg"
-            },
-            {
-                "path": "images/20190713-zeald-fam-118.jpg"
-            },
-            {
-                "path": "images/20190713-zeald-fam-126.jpg"
-            },
-            {
-                "path": "images/20190713-zeald-fam-128.jpg"
-            },
-            {
-                "path": "images/20190713-zeald-fam-171.jpg"
-            },
-            {
-                "path": "images/20190713-zeald-fam-178.jpg"
-            },
-            {
-                "path": "images/20190713-zeald-fam-180.jpg"
-            },
-            {
-                "path": "images/20190713-zeald-fam-189.jpg"
-            },
-            {
-                "path": "images/20190713-zeald-fam-190.jpg"
-            },
-            {
-                "path": "images/20190713-zeald-fam-221.jpg"
-            }
-        ]
-    });
-});
 
 router.get('/my-data', (req, res, next) => {
     // enable cors
@@ -73,6 +31,17 @@ router.get('/my-data', (req, res, next) => {
             "Selenium"
         ]
     })
+});
+
+router.get('/twitter/favorites', (req, res, next) => {
+    client.get('favorites/list', {screen_name: 'ariel_magbanua'})
+        .then((tweets) => {
+            res.send(tweets);
+        })
+        .catch((error) => {
+            console.error(error);
+            throw error;
+        });
 });
 
 module.exports = router;

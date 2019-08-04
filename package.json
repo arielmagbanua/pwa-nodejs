@@ -31,7 +31,9 @@
     "@material/dialog": "^3.1.0",
     "@material/image-list": "^3.0.0",
     "body-parser": "^1.18.3",
-    "express": "^4.17.1"
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "twitter": "^1.7.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
