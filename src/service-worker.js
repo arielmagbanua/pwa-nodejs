@@ -8,11 +8,6 @@ workbox.core.clientsClaim();
 workbox.precaching.precacheAndRoute([]);
 
 workbox.routing.registerRoute(
-    new RegExp('\/api\/my-data$'),
-    new workbox.strategies.NetworkFirst()
-);
-
-workbox.routing.registerRoute(
     new RegExp('\/best-images$'),
     new workbox.strategies.NetworkFirst({
         cacheName: 'route@best-images'
@@ -21,6 +16,12 @@ workbox.routing.registerRoute(
 
 workbox.routing.registerRoute(
     new RegExp('\/$'),
+    new workbox.strategies.NetworkFirst()
+);
+
+// register any invoked twitter favorites route for any twitter user.
+workbox.routing.registerRoute(
+    new RegExp('\/twitter\/[0-9a-zA-Z_]+\/favorites'),
     new workbox.strategies.NetworkFirst()
 );
 

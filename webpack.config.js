@@ -3,7 +3,9 @@ const autoprefixer = require('autoprefixer');
 module.exports = {
     entry: [
         './src/styles/best-images.scss',
-        './src/js/best-images.js'
+        './src/js/best-images.js',
+        './src/styles/twitter-favorites.scss',
+        './src/js/twitter-favorites.js'
     ],
     output: {
         filename: './public/js/bundle.js',

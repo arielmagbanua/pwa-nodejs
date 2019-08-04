@@ -33,8 +33,8 @@ router.get('/my-data', (req, res, next) => {
     })
 });
 
-router.get('/twitter/favorites', (req, res, next) => {
-    client.get('favorites/list', {screen_name: 'ariel_magbanua'})
+router.get('/twitter/:twitterName/favorites', (req, res, next) => {
+    client.get('favorites/list', {screen_name: req.params.twitterName})
         .then((tweets) => {
             res.send(tweets);
         })
