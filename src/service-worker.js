@@ -15,8 +15,10 @@ workbox.routing.registerRoute(
 );
 
 workbox.routing.registerRoute(
-    new RegExp('\/$'),
-    new workbox.strategies.NetworkFirst()
+    new RegExp('\/favorite-tweets$'),
+    new workbox.strategies.NetworkFirst({
+        cacheName: 'route@favorite-tweets'
+    })
 );
 
 // register any invoked twitter favorites route for any twitter user.

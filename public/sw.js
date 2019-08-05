@@ -24,7 +24,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "js/twitterFavorites.js",
-    "revision": "5bd61bd3cd4a268e83a725fdbc75e562"
+    "revision": "7b336774738aef4577e3c1b792347866"
   },
   {
     "url": "styles/best-images.css",
@@ -96,8 +96,10 @@ workbox.routing.registerRoute(
 );
 
 workbox.routing.registerRoute(
-    new RegExp('\/$'),
-    new workbox.strategies.NetworkFirst()
+    new RegExp('\/favorite-tweets$'),
+    new workbox.strategies.NetworkFirst({
+        cacheName: 'route@favorite-tweets'
+    })
 );
 
 // register any invoked twitter favorites route for any twitter user.
