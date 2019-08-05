@@ -8,11 +8,11 @@ workbox.core.clientsClaim();
 workbox.precaching.precacheAndRoute([
   {
     "url": "js/bestImages.js",
-    "revision": "0e314bbcc2c8c8f4007a503558df5563"
+    "revision": "8eff0f6b8480ae1a6859bd8973677512"
   },
   {
     "url": "js/bi.js",
-    "revision": "eb2dad2b91a00457c2ed4e135c3a301e"
+    "revision": "341f78c7ab9b2c66fdc170210a8ebcfe"
   },
   {
     "url": "js/bundle.js",
@@ -20,11 +20,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "js/tf.js",
-    "revision": "65c5f93c9f001d3c0b47589e25fb2045"
+    "revision": "fe7c4810a7d92b3ed54725a04f66bd17"
   },
   {
     "url": "js/twitterFavorites.js",
-    "revision": "9752c91f1735a5ee9bc4672028b2bc5d"
+    "revision": "2e80540c6d3b6fb170762553bc99a335"
   },
   {
     "url": "styles/best-images.css",
