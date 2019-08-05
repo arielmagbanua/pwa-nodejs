@@ -21,7 +21,7 @@ workbox.routing.registerRoute(
 
 // register any invoked twitter favorites route for any twitter user.
 workbox.routing.registerRoute(
-    new RegExp('\/twitter\/[0-9a-zA-Z_]+\/favorites'),
+    new RegExp('api\/twitter\/[0-9a-zA-Z_]+\/favorites'),
     new workbox.strategies.NetworkFirst()
 );
 
