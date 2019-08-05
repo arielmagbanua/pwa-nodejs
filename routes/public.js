@@ -13,7 +13,7 @@ router.get('/best-images', (req, res, next) => {
 });
 
 router.get('/favorite-tweets', (req, res, next) => {
-    res.sendFile(path.join(rootDir, 'views', 'twitter-favorites.html'));
+    res.sendFile(path.join(rootDir, 'views', 'favorite-tweets.html'));
 });
 
 module.exports = router;

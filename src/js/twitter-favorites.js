@@ -11,44 +11,45 @@ import { MDCTextField } from '@material/textfield';
 
     // const icon = new MDCTextFieldIcon(document.getElementById('search-twitter-handle'));
     document.getElementById('search-twitter-handle').addEventListener('click', () => {
-        console.log(twitterHandleTextField.value);
-        
+        // clean up the tweets first
+        let tweetsContainer = document.getElementById('favorite-tweets');
+        while (tweetsContainer.firstChild) {
+            tweetsContainer.removeChild(tweetsContainer.firstChild);
+        }
+
         loadTweets(twitterHandleTextField.value);
     });
 })();
 
 function loadTweets(twitterHandle) {
     fetch(`/api/twitter/${twitterHandle}/favorites`)
-                        .then((response) => response.json())
-                        .then((tweets) => {
-                            // get the tweet container
-                            let tweetsContainer = document.getElementById('favorite-tweets');
-                            while (tweetsContainer.firstChild) {
-                                tweetsContainer.removeChild(tweetsContainer.firstChild);
-                            }
-                            
-                            // only process 10 latest tweets
-                            tweets.forEach((tweet) => {
-                                let tweetCard = document.createElement('div');
-                                tweetCard.className = 'mdc-card tweet-card';
-                                
-                                let tweetAuthor = tweet.user.name;
-                                let tweetSource = tweet.source;
-                                let tweetBody = tweet.text;
+        .then((response) => response.json())
+        .then((tweets) => {
+            // get the tweet container
+            let tweetsContainer = document.getElementById('favorite-tweets');
 
-                                let content = `
-                                    <div class="heading__primary">
-                                        <h2 class="tweet-title mdc-typography mdc-typography--headline6">${tweetAuthor}</h2>
-                                        <h3 class="tweet-author mdc-typography mdc-typography--subtitle2">${tweetSource}</h3>
-                                    </div>
-                                    <div class="body__secondary mdc-typography mdc-typography--body2">
-                                        ${tweetBody}
-                                    </div>
-                                `;
+            // only process 10 latest tweets
+            tweets.forEach((tweet) => {
+                let tweetCard = document.createElement('div');
+                tweetCard.className = 'mdc-card tweet-card';
 
-                                tweetCard.innerHTML = content;
-                                tweetsContainer.appendChild(tweetCard);
-                            });
-                        })
-                        .catch((error) => console.error(error));
+                let tweetAuthor = tweet.user.name;
+                let tweetSource = tweet.source;
+                let tweetBody = tweet.text;
+
+                let content = `
+                        <div class="heading__primary">
+                            <h2 class="tweet-title mdc-typography mdc-typography--headline6">${tweetAuthor}</h2>
+                            <h4 class="tweet-author mdc-typography mdc-typography--subtitle2">${tweetSource}</h4>
+                        </div>
+                        <div class="body__secondary mdc-typography mdc-typography--body2">
+                            ${tweetBody}
+                        </div>
+                `;
+
+                tweetCard.innerHTML = content;
+                tweetsContainer.appendChild(tweetCard);
+            });
+        })
+        .catch((error) => console.error(error));
 }
