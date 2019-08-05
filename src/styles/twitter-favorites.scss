@@ -1,2 +1,17 @@
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/icon-button/mdc-icon-button";
+
+$mdc-theme-primary: #fcb8ab;
+$mdc-theme-secondary: #feeae6;
+$mdc-theme-on-primary: #442b2d;
+$mdc-theme-on-secondary: #442b2d;
+
+body {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+header#top-bar {
+    margin-top: -20px;
+}

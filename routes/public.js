@@ -12,4 +12,8 @@ router.get('/best-images', (req, res, next) => {
     res.sendFile(path.join(rootDir, 'views', 'best-images.html'));
 });
 
+router.get('/twitter-favorites', (req, res, next) => {
+    res.sendFile(path.join(rootDir, 'views', 'twitter-favorites.html'));
+});
+
 module.exports = router;

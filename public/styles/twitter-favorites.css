@@ -387,3 +387,11 @@
     opacity: 0.12; }
   .mdc-icon-button.mdc-ripple-upgraded {
     --mdc-ripple-fg-opacity: 0.12; }
+
+body {
+  display: block;
+  margin: 0;
+  padding: 0; }
+
+header#top-bar {
+  margin-top: -20px; }

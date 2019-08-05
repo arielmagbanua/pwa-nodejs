@@ -1,14 +1,14 @@
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
-    entry: [
-        './src/styles/best-images.scss',
-        './src/js/best-images.js',
-        './src/styles/twitter-favorites.scss',
-        './src/js/twitter-favorites.js'
-    ],
+    entry: {
+        bi: './src/styles/best-images.scss',
+        bestImages: './src/js/best-images.js',
+        tf: './src/styles/twitter-favorites.scss',
+        twitterFavorites: './src/js/twitter-favorites.js'
+    },
     output: {
-        filename: './public/js/bundle.js',
+        filename: './public/js/[name].js',
     },
     module: {
         rules: [
