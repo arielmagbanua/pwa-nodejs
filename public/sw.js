@@ -24,7 +24,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "js/twitterFavorites.js",
-    "revision": "e171c5f24ee833bef8e3a0b9d97813f3"
+    "revision": "9752c91f1735a5ee9bc4672028b2bc5d"
   },
   {
     "url": "styles/best-images.css",
@@ -32,7 +32,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "styles/twitter-favorites.css",
-    "revision": "98908d2877e4ad50fd3b10a1f4f41604"
+    "revision": "0b263791345b21e597af1b80a12bdff4"
   },
   {
     "url": "images/thumbnails/20180316-rust-1.jpg",

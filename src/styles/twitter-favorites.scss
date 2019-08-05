@@ -1,5 +1,8 @@
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/icon-button/mdc-icon-button";
+@import "@material/card/mdc-card";
+@import "@material/textfield/mdc-text-field";
+@import "@material/textfield/icon/mdc-text-field-icon";
 
 $mdc-theme-primary: #fcb8ab;
 $mdc-theme-secondary: #feeae6;
@@ -7,11 +10,38 @@ $mdc-theme-on-primary: #442b2d;
 $mdc-theme-on-secondary: #442b2d;
 
 body {
-    display: block;
+    display: flex;
     margin: 0;
     padding: 0;
 }
 
+#app {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+}
+
+section#tweets {
+    width: 100%;
+    margin-top: 74px;
+    padding-right: 180px;
+    padding-left: 180px;
+    display: flex;
+}
+
+div#favorite-tweets{
+    width: 100%;
+}
+
 header#top-bar {
-    margin-top: -20px;
+    flex: 100%;
+    @include mdc-top-app-bar-fill-color($mdc-theme-primary);
+}
+
+.tweet-card {
+    padding: 16px;
+    margin: 8px;
 }
