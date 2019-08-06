@@ -49,3 +49,8 @@ header#top-bar {
     margin: 8px;
     @include mdc-card-fill-color($card-color)
 }
+
+.mdc-top-app-bar__title > a {
+    text-decoration: none;
+    color: inherit;
+}
