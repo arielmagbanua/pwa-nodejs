@@ -638,3 +638,9 @@ li.photo-container {
     border-radius: 8px; }
   .mdc-image-list__image.mdc-image-list--with-text-protection .mdc-image-list__supporting {
     border-radius: 0 0 8px 8px; }
+
+.mdc-image-list__item .mdc-image-list__image {
+  border-radius: 8px; }
+
+.mdc-image-list__item.mdc-image-list--with-text-protection .mdc-image-list__supporting {
+  border-radius: 0 0 8px 8px; }

@@ -28,7 +28,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "styles/best-images.css",
-    "revision": "978ffc22e4b5672b6fc1b19de69a9631"
+    "revision": "7a9ea63ea7985d79e8b0a8864b55763a"
   },
   {
     "url": "styles/twitter-favorites.css",
