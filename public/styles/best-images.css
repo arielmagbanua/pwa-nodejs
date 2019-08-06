@@ -621,7 +621,9 @@ body {
 
 section#photo-grid {
   padding-right: 180px;
-  padding-left: 180px; }
+  padding-left: 180px;
+  padding-top: 8px;
+  padding-bottom: 8px; }
 
 li.photo-container {
   border-radius: 25px; }
@@ -629,3 +631,10 @@ li.photo-container {
 .mdc-dialog .mdc-dialog__surface {
   min-width: 500px;
   max-width: 600px; }
+
+.mdc-image-list__image {
+  cursor: pointer; }
+  .mdc-image-list__image .mdc-image-list__image {
+    border-radius: 8px; }
+  .mdc-image-list__image.mdc-image-list--with-text-protection .mdc-image-list__supporting {
+    border-radius: 0 0 8px 8px; }

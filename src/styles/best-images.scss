@@ -13,16 +13,24 @@ body {
 section#photo-grid {
 	padding-right: 180px;
 	padding-left: 180px;
+	padding-top: 8px;
+	padding-bottom: 8px;
 }
 
 li.photo-container {
 	border-radius: 25px;
 }
 
-// @include mdc-dialog-min-width(800px);
-// @include mdc-dialog-max-width(900px, 8px);
-
 .mdc-dialog .mdc-dialog__surface {
 	min-width: 500px;
 	max-width: 600px;
+}
+
+.mdc-image-list__image {
+	cursor: pointer;
+	@include mdc-image-list-shape-radius(8px, false);
+}
+
+.mdc-image-list__item {
+	@include mdc-image-list-shape-radius(8px, false);
 }
