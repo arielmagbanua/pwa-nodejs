@@ -608,6 +608,9 @@ svg.mdc-button__icon {
 .mdc-dialog-scroll-lock {
   overflow: hidden; }
 
+body {
+  font-family: 'Roboto', sans-serif; }
+
 .my-masonry-image-list {
   -moz-column-count: 5;
        column-count: 5;

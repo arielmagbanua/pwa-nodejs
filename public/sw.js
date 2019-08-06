@@ -28,11 +28,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "styles/best-images.css",
-    "revision": "0c2216d66a778ba7a7f55ac10c451817"
+    "revision": "7e1238b7a394cf55e69f1d7a97828546"
   },
   {
     "url": "styles/twitter-favorites.css",
-    "revision": "0b263791345b21e597af1b80a12bdff4"
+    "revision": "bba296f22de3abf2b833279ba89eb0a3"
   },
   {
     "url": "images/thumbnails/20180316-rust-1.jpg",
@@ -88,27 +88,41 @@ workbox.precaching.precacheAndRoute([
   }
 ]);
 
+// best images page
 workbox.routing.registerRoute(
     new RegExp('\/best-images$'),
     new workbox.strategies.NetworkFirst({
-        cacheName: 'route@best-images'
+        cacheName: 'route'
     })
 );
 
+// favorites tweet
 workbox.routing.registerRoute(
     new RegExp('\/favorite-tweets$'),
     new workbox.strategies.NetworkFirst({
-        cacheName: 'route@favorite-tweets'
+        cacheName: 'route'
+    })
+);
+
+// cache page index
+workbox.routing.registerRoute(
+    new RegExp('arielmagbanua\.com$'),
+    new workbox.strategies.NetworkFirst({
+        cacheName: 'route'
     })
 );
 
 // register any invoked twitter favorites route for any twitter user.
 workbox.routing.registerRoute(
     new RegExp('api\/twitter\/[0-9a-zA-Z_]+\/favorites'),
-    new workbox.strategies.NetworkFirst()
+    new workbox.strategies.NetworkFirst({
+        cacheName: 'api'
+    })
 );
 
 workbox.routing.registerRoute(
     new RegExp('\/images\/large\/(.+)\.(jpg|jpeg|png|gif)$'),
-    new workbox.strategies.StaleWhileRevalidate()
+    new workbox.strategies.StaleWhileRevalidate({
+        cacheName: 'images-large'
+    })
 );
