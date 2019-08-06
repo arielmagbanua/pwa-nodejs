@@ -25,7 +25,7 @@ workbox.routing.registerRoute(
 
 // cache page index
 workbox.routing.registerRoute(
-    new RegExp('arielmagbanua\.com$'),
+    new RegExp('\/$'),
     new workbox.strategies.NetworkFirst({
         cacheName: 'route'
     })

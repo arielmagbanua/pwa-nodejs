@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js",
+    "start": "node app.js",
+    "start-mon": "nodemon app.js",
     "start-server": "node app.js",
     "build": "rm public/sw.js && workbox injectManifest && webpack -d",
     "webpack-dev": "webpack -d",

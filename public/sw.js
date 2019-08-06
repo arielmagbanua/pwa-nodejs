@@ -28,7 +28,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "styles/best-images.css",
-    "revision": "7a9ea63ea7985d79e8b0a8864b55763a"
+    "revision": "978ffc22e4b5672b6fc1b19de69a9631"
   },
   {
     "url": "styles/twitter-favorites.css",
@@ -106,7 +106,7 @@ workbox.routing.registerRoute(
 
 // cache page index
 workbox.routing.registerRoute(
-    new RegExp('arielmagbanua\.com$'),
+    new RegExp('\/$'),
     new workbox.strategies.NetworkFirst({
         cacheName: 'route'
     })

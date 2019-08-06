@@ -16,4 +16,8 @@ const apiRoutes = require('./routes/api');
 app.use(publicRoutes);
 app.use('/api', apiRoutes);
 
-app.listen(9000);
+const server = app.listen(process.env.port || 8080, () => {
+    const host = server.address().address;
+    const port = server.address().port;
+    console.log(`App listening at https://${host}:${port}`);
+});
