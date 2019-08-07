@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Service Worker</title>
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+
+        section#slides-container {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 16px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="slides-container">
+        <iframe
+            id="slides"
+            src="https://docs.google.com/presentation/d/e/2PACX-1vTmmFJwIabunKa-BlQvQnIvEBUsq5MjYrT0mYM8y1zQeaUh3CJLfKrb22OQy4f3g_7kdv50CH915-J1/embed?start=false&loop=false&delayms=60000"
+            frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true"
+            webkitallowfullscreen="true">
+        </iframe>
+    </section>
+
+
+    <script>
+        (() => {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                // Check that service workers are supported
+                if ('serviceWorker' in navigator) {
+                    navigator.serviceWorker.register('sw.js')
+                        .then((registration) => {
+                            console.log(registration);
+                        }).catch((error) => {
+                            console.error(error);
+                        });
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>

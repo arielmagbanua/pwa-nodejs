@@ -105,6 +105,19 @@ workbox.routing.registerRoute(
     })
 );
 
+// slides page
+workbox.routing.registerRoute(
+    new RegExp('\/slides$'),
+    new workbox.strategies.StaleWhileRevalidate({
+        cacheName: 'route',
+        plugins: [
+            new workbox.cacheableResponse.Plugin({
+                statuses: [0, 200],
+            })
+        ]
+    })
+);
+
 // best images page
 workbox.routing.registerRoute(
     new RegExp('\/best-images$'),
@@ -136,6 +149,19 @@ workbox.routing.registerRoute(
     new RegExp('\/$'),
     new workbox.strategies.StaleWhileRevalidate({
         cacheName: 'route',
+        plugins: [
+            new workbox.cacheableResponse.Plugin({
+                statuses: [0, 200],
+            })
+        ]
+    })
+);
+
+// register and cache all embedded presentation docs 
+workbox.routing.registerRoute(
+    new RegExp('docs\.google\.com\/presentation\/'),
+    new workbox.strategies.NetworkFirst({
+        cacheName: 'google-docs',
         plugins: [
             new workbox.cacheableResponse.Plugin({
                 statuses: [0, 200],
