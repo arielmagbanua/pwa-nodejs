@@ -12,15 +12,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "js/bi.js",
-    "revision": "dcc116d53123eb9e50e1b435605db0ff"
+    "revision": "341f78c7ab9b2c66fdc170210a8ebcfe"
   },
   {
     "url": "js/bundle.js",
     "revision": "76e96606bc53a6db213a3526923f5dfc"
-  },
-  {
-    "url": "js/i.js",
-    "revision": "9e5838fd6cb14da790f546e3de8a47e9"
   },
   {
     "url": "js/tf.js",
@@ -164,7 +160,7 @@ workbox.routing.registerRoute(
 // register and cache all embedded presentation docs 
 workbox.routing.registerRoute(
     new RegExp('docs\.google\.com\/presentation\/'),
-    new workbox.strategies.NetworkFirst({
+    new workbox.strategies.StaleWhileRevalidate({
         cacheName: 'google-docs',
         plugins: [
             new workbox.cacheableResponse.Plugin({

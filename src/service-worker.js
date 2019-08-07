@@ -79,7 +79,7 @@ workbox.routing.registerRoute(
 // register and cache all embedded presentation docs 
 workbox.routing.registerRoute(
     new RegExp('docs\.google\.com\/presentation\/'),
-    new workbox.strategies.NetworkFirst({
+    new workbox.strategies.StaleWhileRevalidate({
         cacheName: 'google-docs',
         plugins: [
             new workbox.cacheableResponse.Plugin({
